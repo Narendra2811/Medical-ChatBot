@@ -22,8 +22,17 @@ html,
 body {
   min-height: 100%;
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top left, rgba(79, 134, 241, 0.14), transparent 22%),
-    radial-gradient(circle at bottom right, rgba(56, 87, 197, 0.12), transparent 18%),
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 134, 241, 0.14),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(56, 87, 197, 0.12),
+      transparent 18%
+    ),
     linear-gradient(180deg, #f7faff 0%, #e9eff9 100%);
   color: var(--text-primary);
 }
@@ -130,7 +139,9 @@ body {
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 18px 40px rgba(15, 40, 94, 0.18);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .primary-action:hover {
@@ -204,7 +215,10 @@ body {
   display: grid;
   place-items: center;
   box-shadow: 0 22px 45px rgba(15, 40, 94, 0.22);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
   z-index: 999;
 }
 
@@ -238,7 +252,9 @@ body.show-chatbot .chatbot-toggle-btn {
   transform: translateY(30px) scale(0.96);
   transform-origin: bottom right;
   pointer-events: none;
-  transition: opacity 0.28s ease, transform 0.28s ease;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease;
   overflow: hidden;
   z-index: 1000;
 }
@@ -322,7 +338,9 @@ body.show-chatbot .chatbot-container {
   display: grid;
   place-items: center;
   font-size: 24px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .header-close:hover {
@@ -368,8 +386,14 @@ body.show-chatbot .chatbot-container {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .message.user-message {
@@ -445,13 +469,27 @@ body.show-chatbot .chatbot-container {
   animation: bounce 1.2s ease-in-out infinite;
 }
 
-.dot:nth-child(1) { animation-delay: 0s; }
-.dot:nth-child(2) { animation-delay: 0.16s; }
-.dot:nth-child(3) { animation-delay: 0.32s; }
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.16s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.32s;
+}
 
 @keyframes bounce {
-  0%, 80%, 100% { transform: translateY(0); opacity: 0.6; }
-  40% { transform: translateY(-8px); opacity: 1; }
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  40% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
 }
 
 /* Footer */
@@ -509,7 +547,9 @@ body.show-chatbot .chatbot-container {
   place-items: center;
   cursor: pointer;
   font-size: 22px;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .send-btn:hover {

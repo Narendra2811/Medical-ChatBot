@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageForm = document.querySelector(".message-form");
   const heroChatOpen = document.querySelector("#hero-chat-open");
 
-  if (!chatBody || !messageInput || !sendMessageButton || !chatbotToggler || !closeChatbot || !messageForm) {
+  if (
+    !chatBody ||
+    !messageInput ||
+    !sendMessageButton ||
+    !chatbotToggler ||
+    !closeChatbot ||
+    !messageForm
+  ) {
     console.error("Chatbot UI initialization failed: missing DOM elements.");
     return;
   }
@@ -43,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
       messageElement.innerText = botResponse;
     } catch (error) {
       console.error(error);
-      messageElement.innerText = "Sorry, I couldn't process your request. Please try again.";
+      messageElement.innerText =
+        "Sorry, I couldn't process your request. Please try again.";
       messageElement.style.color = "#ff0000";
     } finally {
       incomingMessageDiv.classList.remove("thinking");
@@ -65,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="message-bubble">${message}</div>
         <span class="message-time">${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>
       </div>`,
-      "user-message"
+      "user-message",
     );
 
     chatBody.appendChild(userMessageDiv);
@@ -88,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="message-time">typing...</span>
         </div>`,
       "bot-message",
-      "thinking"
+      "thinking",
     );
 
     chatBody.appendChild(botMessageDiv);
