@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>Medical AI Chatbot</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="stylesheet"
+        href="/static/style.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <section class="hero-panel">
+            <div class="hero-copy">
+                <p class="eyebrow">Medical AI Assistant</p>
+                <h1>Clinical-grade healthcare guidance built for fullscreen workflows.</h1>
+                <p class="hero-description">Use the chatbot with confidence on desktop or mobile — the interface now feels premium, modern, and polished across large displays.</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <strong>Fast answers</strong>
+                        <span>Get concise medical guidance in a natural conversation.</span>
+                    </div>
+                    <div class="feature-item">
+                        <strong>Trusted tone</strong>
+                        <span>Designed to feel professional and reassuring for patients.</span>
+                    </div>
+                    <div class="feature-item">
+                        <strong>Responsive design</strong>
+                        <span>Looks great on full-screen monitors, tablets, and phones.</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button type="button" id="hero-chat-open" class="primary-action">Open Medical Assistant</button>
+                    <span class="hero-action-note">The chat icon also stays available in the corner.</span>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <span>Live Medical Chat</span>
+                        <span class="preview-badge">New</span>
+                    </div>
+                    <div class="preview-body">
+                        <p><strong>“What causes migraines?”</strong></p>
+                        <p>Our AI assistant analyzes your question and delivers helpful medical insight quickly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Chat Bubble Button -->
+    <button type="button" id="chatbot-toggler"
+        class="chatbot-toggle-btn"
+        title="Open Medical AI Chat">
+        <span class="material-symbols-rounded">chat_bubble</span>
+    </button>
+
+    <!-- Main Chatbot Container -->
+    <div class="chatbot-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="logo-badge">
+                    <span class="material-symbols-rounded">medical_information</span>
+                </div>
+                <div class="header-text">
+                    <h2>Medical AI Assistant</h2>
+                    <p class="status-indicator">
+                        <span class="status-dot"></span>
+                        Expert clinical guidance in seconds
+                    </p>
+                </div>
+            </div>
+            <button type="button" id="close-chatbot"
+                class="header-close"
+                title="Minimize chat">
+                <span class="material-symbols-rounded">unfold_less</span>
+            </button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-body">
+            <!-- Initial Welcome Message -->
+            <div class="message bot-message">
+                <div class="bot-avatar">
+                    <span class="material-symbols-rounded">health_and_safety</span>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble bot-bubble">
+                        <p>👋 <strong>Welcome!</strong> I'm your Medical AI Assistant.</p>
+                        <p style="margin-top: 8px; font-size: 0.9em;">I can help you with health information, medical
+                            terms, and general wellness advice. How can I assist you today?</p>
+                    </div>
+                    <span class="message-time">now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer / Input Area -->
+        <div class="chat-footer">
+            <form class="message-form">
+                <input type="text"
+                    class="message-input"
+                    placeholder="Ask a medical question like “What causes migraines?”"
+                    required>
+                <button type="button"
+                    id="send-message"
+                    class="send-btn"
+                    title="Send message">
+                    <span class="material-symbols-rounded">send</span>
+                </button>
+            </form>
+            <div class="footer-hint">
+                <span class="material-symbols-rounded">verified</span>
+                Secure, evidence-informed medical guidance
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+
+</html>
